@@ -1,0 +1,21 @@
+<ion-view view-title="Classement">
+  <ion-content class="padding" style="text-align:center">
+  </br>
+  <div class="item item-divider"><div class="titreinfo">  Classement Général des Ecoles</div></div>
+      <div class="row">
+          <div class="col"><b>Rang</b></div>
+          <div class="col"><b>Ecole</b></div>
+          <div class="col"><b>Points</b></div>
+      </div>
+   <div ng-repeat="ecole in classement">
+      <div class="row">
+          <div class="col">{{$index +1}}</div>
+          <div class="col">{{ecole.nom_ecole}}</div>
+          <div class="col">{{ecole.points}}</div>
+      </div>
+    </div>
+      
+  </ion-content>
+</ion-view>
+
+

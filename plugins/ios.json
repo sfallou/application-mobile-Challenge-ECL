@@ -1,0 +1,33 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "fr.challenge-grandes-ecoles"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "fr.challenge-grandes-ecoles"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "fr.challenge-grandes-ecoles"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "fr.challenge-grandes-ecoles"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "fr.challenge-grandes-ecoles"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "fr.challenge-grandes-ecoles"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "fr.challenge-grandes-ecoles"
+        }
+    },
+    "dependent_plugins": {}
+}

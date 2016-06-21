@@ -1,0 +1,141 @@
+body {
+	background-color:white;
+	color:2e3f84;
+	width : auto;
+	padding : 60px;
+	margin : auto;
+	font-family: Century Gothic,Times,serif;
+	font-size:17px;	
+}
+
+
+h1 {
+	margin: 0;
+	margin-top : 20;
+	margin-bottom : 8;
+	color:d1793a;
+	font-size:35px;
+	font-family : Agency Mb Corps,Times,serif
+}
+
+
+a {
+	text-decoration:none;
+	color:2e3f84;
+	font-family: Century Gothic,Times,serif;
+	font-size : 20px;
+	font-weight : 800px;
+}
+
+
+a:hover {
+	color: #367A6C;	
+}
+
+
+ul, li {
+	margin:0;
+	padding:0;
+	list-style-type:none;	
+}
+
+
+#wrapper {
+	width:1100px;
+	margin:0 auto;
+	position:relative;
+}
+
+
+#header {
+	margin-bottom:10px;
+	margin-top:20px;
+	border-radius:20px;
+	width : auto;
+	padding : 60px;
+	margin : auto;
+}
+
+
+#header ul li a {
+	display : block;
+	list-style : none;
+	float : left;
+	margin-left : 10px;
+	background-color : #da9563;
+	text-decoration : none;
+	text-align : center;
+	padding : 10px;
+	border : 0px solid;
+	border-color : #DCDCD #696969 #696969 #DCDCD;
+	border-radius : 10px;
+}
+
+#texte {
+	margin : 10px;
+	float : left;
+}
+
+#texte p {
+	text-indent : 30px;
+	text-align : justify;
+}
+
+#liste ul li {
+	margin-left : 50px;
+	list-style-type : disc;
+	text-align : justify;
+}
+
+#paragraphe {
+	border : 1px dashed;
+	padding : 10px;
+	border-radius : 10px;
+	border-color : 2e3f84;
+}
+
+#photoleft li {
+	margin : 10px;
+	padding : 0;
+	text-align : justify;
+}
+
+#photoleft img {
+	float : left;
+	padding : 5px;
+	width : 12%;
+	height : auto;
+}
+
+#photoright li {
+	margin : 0;
+	padding : 0;
+	text-align : justify;
+}
+
+#photoright img{
+	float : right;
+	padding : 5px;
+	width : 12%;
+	height : auto;
+}
+
+hr {
+	clear;
+}
+
+#footer {
+	border-top:1px #000 solid;
+	margin-top : 50px;
+	padding-top: 1px;
+	font-size:15px;
+	clear:both;	
+}
+
+#footer-copy {
+	float:left;
+}
+
+#quote{
+	clear:both;	
+}

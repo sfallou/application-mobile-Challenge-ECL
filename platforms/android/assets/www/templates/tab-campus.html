@@ -1,0 +1,24 @@
+<ion-view view-title="Campus">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-divider">Plan du campus</div>
+      <div class="item item-body">
+        <div class="list">
+        <ion-item  ng-repeat="item in plans" type="item-text-wrap" >
+      
+        <img class="image-list-thumb" ng-src="{{item.plan}}" ng-click="showImages($index)">
+    
+      </ion-item>
+
+        <!--div ng-repeat="item in plans" >
+          <img width="100%" ng-src="{{ item.plan }}">
+        </div-->
+
+      </div>
+      </div>
+    </div>
+    <br><br>
+  </ion-content>
+</ion-view>
+
+<!-- Fin Code de Thomas: 09/12  -->

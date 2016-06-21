@@ -1,0 +1,2 @@
+/home/sfallou/challenge/platforms/android/build/intermediates/classes/debug
+/home/sfallou/challenge/platforms/android/build/intermediates/pre-dexed/debug/classes-6a074580d52779d3693a8789a929e5ba7c3a5109.jar

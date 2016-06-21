@@ -1,0 +1,23 @@
+<!-- Début Code de Thomas: 09/12
+Home > Informations > Numéros d'urgence
+Page des numéros d'urgence -->
+
+<ion-view view-title="Numéros d'urgence">
+  <ion-content class="padding">
+    <div class="list card">
+      <div ng-repeat="item in urgences" >
+               
+      <div class="item item-divider">{{item.urgence}}</div>
+      <div class="item item-body">
+        <div>
+        <b>Numéro utile :</b> {{item.numero_tel}} </br> </br>
+        <b>Détails :</b> {{item.detail_urgence}}</br>
+            </div>
+      </div>
+    </div>
+    </div>
+    <br/>
+  </ion-content>
+</ion-view>
+
+<!-- Fin Code de Thomas: 09/12 -->

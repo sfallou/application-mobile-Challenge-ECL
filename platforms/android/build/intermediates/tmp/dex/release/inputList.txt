@@ -1,0 +1,2 @@
+/home/sfallou/challenge/platforms/android/build/intermediates/classes/release
+/home/sfallou/challenge/platforms/android/build/intermediates/pre-dexed/release/classes-9ab1485ab2d8027719d0cf83c3a78f53c53e2a58.jar

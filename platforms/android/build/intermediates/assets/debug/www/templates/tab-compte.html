@@ -1,0 +1,47 @@
+<ion-view title="Compte">
+  <ion-content padding="true">
+	<div class="background">
+	<div class="corpsinfo">
+    <div class="list card">
+      <div class="item item-divider" style="text-align:center"><div class="titreinfo">Espace Administrateur</div></div>
+      <div class="item item-body">
+        <div>
+          <form>
+            <label class="item item-input">
+            <span class="input-label">Login :</span>
+            <input type="text" placeholder="" ng-model="user.login" required>
+            </label>
+            <label class="item item-input">
+            <span class="input-label">Mot de passe :</span>
+            <input type="password" placeholder="" ng-model="user.mdp" required>
+            </label>
+              <button class="button button-block button-stable" type="submit" ng-click="connexion(user)">Connexion</button>
+            <div ng-if="connected">
+              <button class="button button-block button-stable" type="submit" ng-click="deconnexion()">Déconnexion</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div ng-if="connected">
+       <div class="item item-divider" style="text-align:center"><div class="titreinfo">Connecté en tant que :</div></div>
+       <div class="item item-body">
+        <div class="list">
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-person"></i><b>Nom :</b> {{utilisateur.nom}}
+           </a>
+           <a class="item item-icon-left" href="#">
+            <i class="icon ion-qr-scanner"></i><b>Login :</b> {{utilisateur.login}}
+           </a>
+           <a class="item item-icon-left" href="#">
+            <i class="icon ion-lock-combination"></i><b>Profil :</b> {{utilisateur.profil}}
+           </a>
+         </div>
+       </div>
+      </div>
+    </div>    
+  </div>
+</div>
+   <br>
+ </br>
+</ion-content>
+</ion-view>

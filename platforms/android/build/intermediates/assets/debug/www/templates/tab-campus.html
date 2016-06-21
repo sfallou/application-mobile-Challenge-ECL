@@ -1,0 +1,25 @@
+<!-- Début Code de Thomas: 09/12
+Home > Informations > Plan du Camps
+Page du plan du Campus -->
+
+<ion-view view-title="Campus">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-divider">Plan du campus</div>
+      <div class="item item-body">
+        <div class="list">
+        <div ng-repeat="item in plans" >
+          <ion-scroll zooming="true" direction="xy" style="width: 100%; ">
+          <img width="100%" ng-src="{{ item.plan }}">
+        </ion-scroll>
+          <HR class="barre" size=2 width="80%">
+        </div>
+
+      </div>
+      </div>
+    </div>
+    <br><br>
+  </ion-content>
+</ion-view>
+
+<!-- Fin Code de Thomas: 09/12  -->

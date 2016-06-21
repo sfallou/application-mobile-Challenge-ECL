@@ -1,0 +1,27 @@
+<ion-view cache-view="false" view-title="Classement">
+  <ion-content class="padding" style="text-align:center">
+
+
+   <div class="list card">
+      <div class="item item-divider custom-item mini_titre"><div class="titreinfo"> Classement Général</div> </div>
+      <div class="item item-body">
+        <ul>
+   <div ng-repeat="ecole in classement">
+      <div class="row">
+          <div class="col col-10 chiffre">{{$index +1}}</div>
+          <div class="col col-10"><img width="30" class="logo" ng-src="{{ecole.logo_ecole}}"></div>
+          <div class="col">{{ecole.nom_ecole}}</div>
+          <div class="col col-25">{{ecole.points}} pts</div>
+      </div>
+    </div>
+        </ul>
+        
+      </div>
+    </div>
+
+
+      
+  </ion-content>
+</ion-view>
+
+

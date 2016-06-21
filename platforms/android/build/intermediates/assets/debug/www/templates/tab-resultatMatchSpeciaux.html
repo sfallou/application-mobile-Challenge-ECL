@@ -1,0 +1,52 @@
+<ion-view view-title="Matchs">
+  <ion-content class="padding" style="text-align:center">
+	<div class="background">
+    <br/>
+	 <div class="item item-divider"><div class="titreinfo">  {{resultat.sport}} {{resultat.genre}} </div>
+  </div>
+  <div ng-if="connected">
+      <div class="row">
+          <div class="col"><b>Equipe/Joueur</b></div>
+          <div class="col"><b>Classement</b></div>
+          <div class="col"><b>Action</b></div>
+      </div>
+    <div  ng-repeat="matchSpecial in resultat.matchs | orderBy: 'classement_equipe'">
+      <div class="row item item-input-inset">
+          <div class="col">{{matchSpecial.equipe}}</div>
+          <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1"  ng-model="matchSpecial.classement_equipe" required/>
+            </label>
+          </div>
+
+        <div class="col">
+           <input type="hidden" ng-model="matchSpecial.id_match_special">
+            </label>
+          <button class="button button-small" ng-click="modifier_classement(matchSpecial)">
+          Modifier
+        </button>
+        </div>
+      </div>
+       
+    </div>
+  </div>
+  <div ng-hide="connected">
+       <div class="row">
+          <div class="col"><b>Equipe/Joueur</b></div>
+          <div class="col"><b>Classement</b></div>
+      </div>
+   <div ng-repeat="matchSpecial in resultat.matchs | orderBy: 'classement_equipe'">
+      <div class="row">
+          <div class="col">{{matchSpecial.equipe}}</div>
+          <div class="col">{{matchSpecial.classement_equipe}} </div>
+          
+      </div>
+    </div>
+  
+  </div>
+
+	</div>
+</br>
+</br>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,49 @@
+<ion-view title="Compte" >
+  <ion-content padding="true">
+	<div class="background">
+	<div class="corpsinfo">
+    <div class="list card">
+      <div class="item item-divider mini_titre" style="text-align:center"><div class="titreinfo">Espace Administrateurs</div></div>
+      <div class="item item-body">
+        <div>
+          <form>
+            <label class="item item-input">
+            <span class="input-label">Login :</span>
+            <input type="text" placeholder="" ng-model="user.login" required>
+            </label>
+            <label class="item item-input">
+            <span class="input-label">Mot de passe :</span>
+            <input type="password" placeholder="" ng-model="user.mdp" required>
+            </label>
+            <div ng-hide="connected">
+              <button class="button button-block button-stable" type="submit" ng-click="connexion(user)"><div class="custom-button">Connexion</div></button>
+            </div>
+            <div ng-if="connected">
+              <button class="button button-block button-stable" type="submit" ng-click="deconnexion()"><div class="custom-button">Déconnexion</div></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div ng-if="connected">
+       <div class="item item-divider mini_titre" style="text-align:center"><div class="titreinfo">Connecté en tant que :</div></div>
+       <div class="item item-body">
+        <div class="list">
+          <div class="item item-icon-left" >
+            <i class="icon ion-person"></i><b>Nom :</b> {{utilisateur.nom}}
+           </div>
+           <div class="item item-icon-left">
+            <i class="icon ion-qr-scanner"></i><b>Login :</b> {{utilisateur.login}}
+           </div>
+           <div class="item item-icon-left">
+            <i class="icon ion-lock-combination"></i><b>Profil :</b> {{utilisateur.profil}}
+           </div>
+         </div>
+       </div>
+      </div>
+    </div>    
+  </div>
+</div>
+   <br>
+ </br>
+</ion-content>
+</ion-view>

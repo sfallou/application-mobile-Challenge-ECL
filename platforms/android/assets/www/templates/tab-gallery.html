@@ -1,0 +1,13 @@
+<ion-view cache-view="false" view-title="Galerie">
+   <ion-content>
+        <br>
+        <br>
+    <ion-list style="text-align:center;">
+      <ion-item  ng-repeat="photo in photos" type="item-text-wrap" >
+      
+        <img class="image-list-thumb" ng-src="{{photo.photo}}" ng-click="showImages($index)">
+    
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

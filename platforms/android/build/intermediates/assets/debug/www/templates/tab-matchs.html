@@ -1,0 +1,30 @@
+<ion-view title="Matchs">
+  <ion-content padding="true">
+  <div class="background">
+  <div class="corpsinfo">
+    <div class="list card">
+        <div>
+          <div class="item item-divider custom-item" style="text-align:center"><div class="titreinfo">Genre</div></div>
+            <!--<input type="radio" name="sexe" value="Homme" placeholder="" ng-model="matchs.sexe" required> -->
+            <ion-radio class = "custom-radio-sexe" ng-repeat="item in sexe" ng-value="item.value" ng-model="matchs.sexe" name="sexe" style="float:left">
+            {{item.text}}
+          </ion-radio>
+
+        </div>
+
+        
+      </div>
+      
+<div class="bouton_selection">
+      <select  class="ion-input-select" name="singleSelect" ng-model="matchs.sport">
+        <option value="">Sélectionner un sport</option> <!-- not selected / blank option -->
+        <option  ng-repeat="sport in sports" ng-value="sport.text"> {{sport.text}} </option>
+      </select>
+</div>
+      </br>
+      <div class="button-match">
+        <button class="button button-clear button-positive custom-button" type="submit" ng-click="recherche(matchs)">Rechercher</button>
+      </div>
+</div>
+</ion-content>
+</ion-view>

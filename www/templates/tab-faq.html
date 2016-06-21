@@ -1,0 +1,71 @@
+<!-- Début Code de Thomas: 09/12 -->  
+
+<ion-view view-title="FAQ">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-divider">Sports</div>
+      <div class="item item-body">
+        <div>
+          <div ng-repeat='faq in faqs | filter:{ "titre":"Sport" }'>
+            <b>{{faq.question}}</b></br>
+            {{faq.reponse}}<br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="list card">
+      <div class="item item-divider">Communication</div>
+      <div class="item item-body">
+        <div>
+          <div ng-repeat='faq in faqs | filter:{ "titre":"Communication" }'>
+            <b>{{faq.question}}</b></br>
+            {{faq.reponse}}<br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-divider">Sécurité</div>
+      <div class="item item-body">
+        <div>
+          <div ng-repeat='faq in faqs | filter:{ "titre":"Securite" }'>
+            <b>{{faq.question}}</b></br>
+            {{faq.reponse}}<br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="list card">
+      <div class="item item-divider">Soirée</div>
+      <div class="item item-body">
+        <div>
+          <div ng-repeat='faq in faqs | filter:{ "titre":"Soiree" }'>
+            <b>{{faq.question}}</b></br>
+            {{faq.reponse}}<br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-divider">Logistique</div>
+      <div class="item item-body">
+        <div>
+          <div ng-repeat='faq in faqs | filter:{ "titre":"Logistique" }'>
+            <b>{{faq.question}}</b></br>
+            {{faq.reponse}}<br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </br>
+</br>
+
+<!--Fin Code de Thomas: 09/12 -->
+    
+  </ion-content>
+</ion-view>

@@ -1,0 +1,330 @@
+<ion-view view-title="Matchs">
+  <ion-content class="padding" style="text-align:center">
+  <div class="background">
+      </br>
+   <div class="item item-divider"><div class="titreinfo"> {{resultat1.sport}} {{resultat1.genre}} </div>
+  </div>
+  <div ng-if="connected">
+        <div class="item item-divider"><div class="titreinfo"> Finale </div></div>
+    <div ng-repeat='match in finales | filter:{"phase_match":"Finale"}'>
+      <div class="row item item-input-inset">
+          <div class="col">
+            <label class="item-input-wrapper">
+              <select  class="ion-input-select" name="singleSelect"  ng-model="match.equipe1">
+                <option value="{{match.equipe1}}">{{match.equipe1Tronq}}</option>
+                <option  ng-repeat="equipe in resultat1.equipes" value="{{equipe.equipe}}"> {{equipe.equipeTronq}} </option>
+               </select>
+            </label>
+          </div>
+          <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1"  ng-model="match.score1" required/>
+            </label>
+          </div>
+           <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1" ng-model="match.score2" required/>
+            </label>
+          </div>
+          <div class="col">
+          <label class="item-input-wrapper">
+              <select  class="ion-input-select" name="singleSelect"  ng-model="match.equipe2">
+                <option value="{{match.equipe2}}">{{match.equipe2Tronq}}</option>
+                <option  ng-repeat="equipe in resultat1.equipes" value="{{equipe.equipe}}"> {{equipe.equipeTronq}} </option>
+               </select>
+            </label>
+          </div>
+          </div>
+        <div class="col">
+           <input type="hidden" ng-model="match.id_match">
+           
+          <button class="button button-small" ng-click="modifier_tout(match)">
+          Modifier
+        </button>
+        
+      </div>
+    </div>
+        <div class="item item-divider"><div class="titreinfo"> Demies Finales </div></div>
+    <div ng-repeat='match in demie_finales | filter:{"phase_match":"Demie_finale"}'>
+      <div class="row item item-input-inset">
+          <div class="col">
+            <label class="item-input-wrapper">
+              <select  class="ion-input-select" name="singleSelect"  ng-model="match.equipe1">
+                <option value="{{match.equipe1}}">{{match.equipe1Tronq}}</option>
+                <option  ng-repeat="equipe in resultat1.equipes" value="{{equipe.equipe}}"> {{equipe.equipeTronq}} </option>
+               </select>
+            </label>
+          </div>
+          <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1"  ng-model="match.score1" required/>
+            </label>
+          </div>
+           <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1" ng-model="match.score2" required/>
+            </label>
+          </div>
+          <div class="col">
+          <label class="item-input-wrapper">
+              <select  class="ion-input-select" name="singleSelect"  ng-model="match.equipe2">
+                <option value="{{match.equipe2}}">{{match.equipe2Tronq}}</option>
+                <option  ng-repeat="equipe in resultat1.equipes" value="{{equipe.equipe}}"> {{equipe.equipeTronq}} </option>
+               </select>
+            </label>
+          </div>
+          </div>
+        <div class="col">
+           <input type="hidden" ng-model="match.id_match">
+           
+          <button class="button button-small" ng-click="modifier_tout(match)">
+          Modifier
+        </button>
+        
+      </div>
+    </div>
+        <div class="item item-divider"><div class="titreinfo"> Quarts de Finale</div></div>
+   <div ng-repeat='match in quart_finales | filter:{"phase_match":"Quart_finale"}'>
+      <div class="row item item-input-inset">
+          <div class="col">
+            <label class="item-input-wrapper">
+              <select  class="ion-input-select" name="singleSelect"  ng-model="match.equipe1">
+                <option value="{{match.equipe1}}">{{match.equipe1Tronq}}</option>
+                <option  ng-repeat="equipe in resultat1.equipes" value="{{equipe.equipe}}"> {{equipe.equipeTronq}} </option>
+               </select>
+            </label>
+          </div>
+          <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1"  ng-model="match.score1" required/>
+            </label>
+          </div>
+           <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1" ng-model="match.score2" required/>
+            </label>
+          </div>
+          <div class="col">
+          <label class="item-input-wrapper">
+              <select  class="ion-input-select" name="singleSelect"  ng-model="match.equipe2">
+                <option value="{{match.equipe2}}">{{match.equipe2Tronq}}</option>
+                <option  ng-repeat="equipe in resultat1.equipes" value="{{equipe.equipe}}"> {{equipe.equipeTronq}} </option>
+               </select>
+            </label>
+          </div>
+          </div>
+        <div class="col">
+           <input type="hidden" ng-model="match.id_match">
+            
+          <button class="button button-small" ng-click="modifier_tout(match)">
+          Modifier
+        </button>
+        
+      </div>
+    </div>
+    <div class="item item-divider"><div class="titreinfo"> Huitièmes de Finale</div></div>
+    <div ng-repeat='match in huitieme_finales | filter:{"phase_match":"Huitieme_finale"}'>
+      <div class="row item item-input-inset">
+          <div class="col">
+            <label class="item-input-wrapper">
+              <select  class="ion-input-select" name="singleSelect"  ng-model="match.equipe1">
+                <option value="{{match.equipe1}}">{{match.equipe1Tronq}}</option>
+                <option  ng-repeat="equipe in resultat1.equipes" value="{{equipe.equipe}}"> {{equipe.equipeTronq}}</option>
+               </select>
+            </label>
+          </div>
+          <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1"  ng-model="match.score1" required/>
+            </label>
+          </div>
+           <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1" ng-model="match.score2" required/>
+            </label>
+          </div>
+          <div class="col">
+          <label class="item-input-wrapper">
+              <select  class="ion-input-select" name="singleSelect"  ng-model="match.equipe2">
+                <option value="{{match.equipe2}}">{{match.equipe2Tronq}}</option>
+                <option  ng-repeat="equipe in resultat1.equipes" value="{{equipe.equipe}}"> {{equipe.equipeTronq}} </option>
+               </select>
+            </label>
+          </div>
+          </div>
+        <div class="col">
+           <input type="hidden" ng-model="match.id_match">
+            
+          <button class="button button-small" ng-click="modifier_tout(match)">
+          Modifier
+        </button>
+      
+      </div>
+    </div>
+
+      <div class="item item-divider"><div class="titreinfo"> Barrage </div></div>
+    <div ng-repeat='match in barrages | filter:{"phase_match":"Barrage"}'>
+      <div class="row item item-input-inset">
+          <div class="col">
+            <label class="item-input-wrapper">
+              <select  class="ion-input-select" name="singleSelect"  ng-model="match.equipe1">
+                <option value="{{match.equipe1}}">{{match.equipe1Tronq}}</option>
+                <option  ng-repeat="equipe in resultat1.equipes" value="{{equipe.equipe}}"> {{equipe.equipeTronq}} </option>
+               </select>
+            </label>
+          </div>
+          <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1"  ng-model="match.score1" required/>
+            </label>
+          </div>
+           <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1" ng-model="match.score2" required/>
+            </label>
+          </div>
+          <div class="col">
+          <label class="item-input-wrapper">
+              <select  class="ion-input-select" name="singleSelect"  ng-model="match.equipe2">
+                <option value="{{match.equipe2}}">{{match.equipe2Tronq}}</option>
+                <option  ng-repeat="equipe in resultat1.equipes" value="{{equipe.equipe}}"> {{equipe.equipeTronq}} </option>
+               </select>
+            </label>
+          </div>
+          </div>
+
+
+        <div class="col">
+           <input type="hidden" ng-model="match.id_match">
+            
+          <button class="button button-small" ng-click="modifier_tout(match)">
+          Modifier
+        </button>
+        </div>
+      </div>
+       
+
+    <div class="item item-divider"><div class="titreinfo"> Phase de Poules </div></div>
+   <div ng-repeat='match in poules | filter:{"phase_match":"Poule"}'>
+      <div class="row item item-input-inset">
+          <div class="col">{{match.equipe1Tronq}}</div>
+          <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1"  ng-model="match.score1" required/>
+            </label>
+          </div>
+           <div class="col" >
+            <label class="item-input-wrapper">
+              <input class="ion-input-select" type="text" size="1" ng-model="match.score2" required/>
+            </label>
+          </div>
+          <div class="col">{{match.equipe2Tronq}}</div>
+
+           
+
+      </div>
+      <div class="col" >
+      <input type="hidden" ng-model="match.id_match">
+
+
+          <button class="button button-small" ng-click="modifier(match)">
+          Modifier
+        </button>
+
+      </div>
+       
+    </div>
+  </div>
+  <div ng-hide="connected">
+        <div class="item item-divider"><div class="titreinfo"> Finale </div></div>
+         <div ng-repeat='match in finales | filter:{"phase_match":"Finale"}'>
+        <div class="row">
+          <div class="col">{{match.equipe1Tronq}}</div>
+          <div class="col">{{match.score1}} : {{match.score2}} </div>
+          <div class="col">{{match.equipe1Tronq}}</div>
+        </div>
+          <div class="col">{{match.date_match}} {{match.heure_match}} {{match.lieu_match}}</div>
+  </br>
+              <HR class="barre" size=1 width="80%">
+      
+    </div>
+
+
+    <div class="item item-divider"><div class="titreinfo"> Demies finale </div></div>
+   <div ng-repeat='match in demie_finales | filter:{"phase_match":"Demie_finale"}'>
+      <div class="row">
+          <div class="col">{{match.equipe1Tronq}}</div>
+          <div class="col">{{match.score1}} : {{match.score2}} </div>
+          <div class="col">{{match.equipe2Tronq}}</div>
+        </div>
+          <div class="col">{{match.date_match}} {{match.heure_match}} {{match.lieu_match}}</div>
+  </br>
+              <HR class="barre" size=1 width="80%">
+      
+    </div>
+
+
+   <div class="item item-divider"> <div class="titreinfo"> Quarts de finale </div></div>
+   <div ng-repeat='match in quart_finales | filter:{"phase_match":"Quart_finale"}'>
+      <div class="row">
+          <div class="col">{{match.equipe1Tronq}}</div>
+          <div class="col">{{match.score1}} : {{match.score2}} </div>
+          <div class="col">{{match.equipe2Tronq}}</div>
+        </div>
+          <div class="col">{{match.date_match}} {{match.heure_match}} {{match.lieu_match}}</div>
+  </br>
+              <HR class="barre" size=1 width="80%">
+      
+    </div>
+
+
+ <div class="item item-divider"> <div class="titreinfo"> Huitièmes de finale </div></div>
+   <div ng-repeat='match in huitieme_finales | filter:{"phase_match":"Huitieme_finale"}'>
+      <div class="row">
+          <div class="col">{{match.equipe1Tronq}}</div>
+          <div class="col">{{match.score1}} : {{match.score2}} </div>
+          <div class="col">{{match.equipe2Tronq}}</div>
+        </div>
+          <div class="col">{{match.date_match}} {{match.heure_match}} {{match.lieu_match}}</div>
+  </br>
+              <HR class="barre" size=1 width="80%">
+      
+    </div>
+
+
+  <div class="item item-divider"><div class="titreinfo"> Matchs de barrage </div></div>
+   <div ng-repeat='match in barrages | filter:{"phase_match":"Barrage"}'>
+      <div class="row">
+          <div class="col">{{match.equipe1Tronq}}</div>
+          <div class="col">{{match.score1}} : {{match.score2}} </div>
+          <div class="col">{{match.equipe2Tronq}}</div>
+        </div>
+          <div class="col">{{match.date_match}} {{match.heure_match}} {{match.lieu_match}}</div>
+  </br>
+              <HR class="barre" size=1 width="80%">
+      
+    </div>
+
+
+  <div class="item item-divider"><div class="titreinfo"> Phase de poules </div></div>
+   <div ng-repeat='match in poules | filter:{"phase_match":"Poule"}'>
+      <div class="row">
+          <div class="col">{{match.equipe1Tronq}}</div>
+          <div class="col">{{match.score1}} : {{match.score2}} </div>
+          <div class="col">{{match.equipe2Tronq}}</div>
+        </div>
+          <div class="col">{{match.date_match}} {{match.heure_match}} {{match.lieu_match}}</div>
+  </br>
+              <HR class="barre" size=1 width="80%">
+      
+    </div>
+
+
+  
+  </div>
+
+
+  </div>
+</br>
+  </ion-content>
+</ion-view>

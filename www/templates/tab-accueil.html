@@ -1,0 +1,41 @@
+<ion-view cache-view="false" view-title="CHALLENGE Centrale Lyon">
+  <ion-content class="padding" >
+   <!--
+      Les slides
+    -->
+  </br>
+   <ion-slide-box pager-click="navSlide(index)" auto-play="true"  does-continue="true">
+    <ion-slide>
+       <a href="#/tab/gallery"> 
+        <img style="width: 100%" ng-src="{{liens[0].lien}}">
+      </a>
+
+    </ion-slide>
+    <ion-slide>
+      <a href="#/tab/gallery">
+         <img style="width: 100%" ng-src="{{liens[1].lien}}">
+      </a>
+    </ion-slide>
+    <ion-slide>
+      <a href="#/tab/gallery">
+         <img style="width: 100%" ng-src="{{liens[2].lien}}">
+      </a>
+    </ion-slide>
+  </ion-slide-box>
+  <br>
+<!-- Les informations-->
+
+<div class="list">
+
+<div ng-repeat="item in news" class="item item-thumbnail-left item-text-wrap" >
+          <img ng-src="{{ item.image_info }}">
+        
+          <h2>{{ item.titre_info }}</h2>
+          <p>{{ item.contenu_info }}</p>
+          <h6 align="right" class="subdued"><i>{{item.date_info}} à {{item.heure_info}}<i></h6>
+</div>
+</div>
+
+<br/>
+ </ion-content>
+</ion-view>

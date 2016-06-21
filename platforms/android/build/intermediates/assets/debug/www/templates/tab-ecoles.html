@@ -1,0 +1,88 @@
+<ion-view view-title="Ecoles">
+  <ion-content class="padding" style="text-align:center">
+    <div class="background">
+  <div class="corpsinfo">
+  <div class="list card">
+      <div class="item item-divider custom-item"><div class="titreinfo"> Classement</div> </div>
+      <div class="item item-body">
+        <ul>
+          <li ng-repeat="ecole in classement | limitTo:3"> <img width="30" ng-src="{{ecole.logo_ecole}}"> </br> {{$index+1}}.  {{ecole.nom_ecole}} </li>
+        </ul>
+        <a href="#/tab/classement"><button class='button button-clear button-positive icon ion-plus custom-button'></button></a>
+      </div>
+    </div>
+    <div class="list card titreinfo">
+      <div class="item item-divider custom-item"><div class="titreinfo">Informations sur une école</div></div>
+    </br>
+          <div class="">
+           <!--div class="buttons">
+              <button class="button icon-right ion-chevron-down button-clear" ng-click="openModal()">{{modalData.msg.nom_ecole}}</button>
+              
+          </div-->
+          <form name="myForm">
+         
+
+
+             <select  class="ion-input-select" name="singleSelect"  ng-model="Infoecole">
+                <option value="">Sélectionner une école</option> <!-- not selected / blank option -->
+                <option  ng-repeat="ecole in ecoles | orderBy: 'nom_ecole'" value="{{ecole.abreviation}}"> {{ecole.nom_ecole}} </option>
+               </select>
+          </br>
+            <button class="button button-clear button-positive" ng-click="getInfoEcole(Infoecole)">Rechercher</button><br>
+          </form>          
+       </div>
+      </div>
+      <div ng-if="matchs_ecole">
+       <div class="row">
+          <div class="col"><img width="30" ng-src="{{matchs_ecole.logo_ecole}}"></div>
+          <div class="col">{{matchs_ecole.nom_ecole}}</div>
+          <div class="col">{{matchs_ecole.points}} pts</div>
+        </div>
+        <div class="item item-divider"><div class="titreinfo">Matchs à venir</div></div>
+
+            <ul>
+              <li ng-repeat='match in matchs_ecole.matchs | filter: {"etat_match":"0"}'>
+                <div class="row"><div class="col">{{match.phase_match}}</div></div>
+                <div class="row">
+                  <div class="col">{{match.equipe1}}</div>
+                  <div class="col">{{match.equipe2}}</div>
+                   
+                </div>
+                  <div>{{match.date_match}} {{match.heure_match}} {{match.lieu_match}}</div>
+                  <HR class="barre" size=1 width="80%">
+
+                
+               </li>
+            </ul>
+
+        <div class="item item-divider"><div class="titreinfo">Matchs joués</div></div>
+
+            <ul>
+              <li ng-repeat='match in matchs_ecole.matchs | filter: {"etat_match":"1"}'>
+                <div class="row"><div class="col">{{match.phase_match}}</div></div>
+                <div class="row">
+                  <div class="col">{{match.equipe1}}</div>
+                  <div class="col">{{match.score1}} : {{match.score2}}</div>
+                  <div class="col">{{match.equipe2}}</div>
+                </div>
+                <HR class="barre" size=1 width="80%">
+               </li>
+            </ul>
+
+        </div>
+    </div>
+  </div>
+  </div>
+</br>
+</br>
+
+
+        
+    
+
+
+    
+  </ion-content>
+</ion-view>
+
+
